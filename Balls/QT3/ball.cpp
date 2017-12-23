@@ -36,7 +36,7 @@ void Ball::move(int w, int h)
 void Ball::draw(QPainter &painter)
 {
     painter.setBrush(QBrush(color));
-    painter.drawEllipse(point, r, r);
+    painter.drawImage(point.x()-r,point.y()-r,QImage(":/new/img/ball.jpg").scaled(2*r,2*r));
 }
 
 int distance(QPoint a, QPoint b)

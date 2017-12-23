@@ -15,7 +15,7 @@ Widget::Widget(QWidget *parent) :
 
 Widget::~Widget()
 {
-    delete ui;
+ delete ui;
 }
 
 void Widget::paintEvent(QPaintEvent *e)
@@ -51,7 +51,7 @@ void Widget::stop()
     ui->pushButton_2->show();
 }
 
-void Widget::moveAll()
+int Widget::moveAll()
 {
     for (int i=0; i<NUM; i++)
     {
@@ -70,9 +70,12 @@ void Widget::moveAll()
             balls[i]->vy*=-1;
             players[0]->hp--;
             if (players[0]->hp<=0)
+            {
                 stop();
+                return 0;
+            }
         }
-        balls[i]->move(width(), height());
+            balls[i]->move(width(), height());
     }
     this->s_hp(players[0]->hp);
     this->repaint();
@@ -109,5 +112,6 @@ void Widget::on_pushButton_clicked()
 
 void Widget::on_pushButton_2_clicked()
 {
+    delete ui;
     this->close();
 }

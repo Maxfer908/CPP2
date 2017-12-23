@@ -28,7 +28,7 @@ protected:
     void keyPressEvent(QKeyEvent * a);
     void stop();
 protected slots:
-    void moveAll();
+    int moveAll();
 private:
     Ui::Widget *ui;
 public slots:

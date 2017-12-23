@@ -27,7 +27,7 @@ void Player::move(QKeyEvent& a)
 void Player::draw(QPainter& painter)
 {
     painter.setBrush(QBrush(color));
-    painter.drawEllipse(point, r, r);
+    painter.drawImage(point.x()-r,point.y()-r,QImage(":/new/img/player.jpg").scaled(2*r,2*r));
 }
 
 
