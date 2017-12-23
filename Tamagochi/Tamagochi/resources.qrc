@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/files">
+        <file>Images/Inkednothing — копия_LI.jpg</file>
+        <file>Images/Inkednothing.jpg</file>
+    </qresource>
+</RCC>
